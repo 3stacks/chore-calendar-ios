@@ -1,0 +1,26 @@
+name: ChoreCalendar
+options:
+  bundleIdPrefix: com.lukeboyle
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+targets:
+  ChoreCalendar:
+    type: application
+    platform: iOS
+    sources:
+      - ChoreCalendar
+    settings:
+      base:
+        DEVELOPMENT_TEAM: LSJMLRNM5B
+        CODE_SIGN_STYLE: Automatic
+        PRODUCT_BUNDLE_IDENTIFIER: com.lukeboyle.ChoreCalendar
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.9"
+        INFOPLIST_GENERATION_MODE: GeneratedFile
+        GENERATE_INFOPLIST_FILE: YES
+    info:
+      path: ChoreCalendar/Info.plist
+      properties:
+        UILaunchScreen: {}
