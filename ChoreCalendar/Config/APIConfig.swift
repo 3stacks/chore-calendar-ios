@@ -8,7 +8,7 @@ enum APIConfig {
         if let plistURL = Bundle.main.object(forInfoDictionaryKey: "API_BASE_URL") as? String, !plistURL.isEmpty {
             return plistURL.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         }
-        return "https://chores.home.lukeboyle.com"
+        fatalError("API_BASE_URL not set. Create Config.xcconfig from Config.xcconfig.example")
     }
 
     static let timeoutInterval: TimeInterval = 30

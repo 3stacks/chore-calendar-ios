@@ -62,6 +62,7 @@
 		7C36F6250785CB5589931551 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		845056ED1C8EEA52E717FF4A /* MealsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsAPI.swift; sourceTree = "<group>"; };
 		8CDA30D4E543ABE0B051700B /* ShoppingListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListDetailView.swift; sourceTree = "<group>"; };
+		8CFE5495FACD52163957FD07 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		8F3C4D2AF0C050FE1747E072 /* RecipesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesAPI.swift; sourceTree = "<group>"; };
 		94B7FD24A4F76FA7FF4C36AF /* MealPlanStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanStore.swift; sourceTree = "<group>"; };
 		999DC83137283EDA6F9D622C /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
@@ -98,6 +99,15 @@
 				10496DC85FA3EC229930C7EE /* APIConfig.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		19EDFE2129E88C2F01B00F8C /* chore-calendar-ios */ = {
+			isa = PBXGroup;
+			children = (
+				8CFE5495FACD52163957FD07 /* Config.xcconfig */,
+			);
+			name = "chore-calendar-ios";
+			path = .;
 			sourceTree = "<group>";
 		};
 		2C14F9763E4EE90E8CD7791A /* Views */ = {
@@ -167,6 +177,7 @@
 		B3685D75D429F8C877DAF4DB = {
 			isa = PBXGroup;
 			children = (
+				19EDFE2129E88C2F01B00F8C /* chore-calendar-ios */,
 				E76CE7B51A9F5A8D3819F4A2 /* ChoreCalendar */,
 				EA1A5425A4D790442B0ED8B1 /* Products */,
 			);
@@ -440,6 +451,7 @@
 		};
 		EFF249C59DF3A136E5D3A9E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CFE5495FACD52163957FD07 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -463,6 +475,7 @@
 		};
 		FBA068556E738DC8465934AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CFE5495FACD52163957FD07 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

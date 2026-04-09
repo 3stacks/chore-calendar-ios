@@ -22,5 +22,9 @@ build/
 .build/
 Packages/
 
+# Local config
+Config.xcconfig
+tmp/
+
 # macOS
 .DS_Store

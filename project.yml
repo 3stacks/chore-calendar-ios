@@ -10,6 +10,9 @@ targets:
     platform: iOS
     sources:
       - ChoreCalendar
+    configFiles:
+      Debug: Config.xcconfig
+      Release: Config.xcconfig
     settings:
       base:
         DEVELOPMENT_TEAM: LSJMLRNM5B
@@ -24,3 +27,4 @@ targets:
       path: ChoreCalendar/Info.plist
       properties:
         UILaunchScreen: {}
+        API_BASE_URL: $(API_BASE_URL)
