@@ -35,4 +35,39 @@ final class RecipeStore {
         }
         isLoadingDetail = false
     }
+
+    func createRecipe(body: [String: Any]) async -> Int? {
+        error = nil
+        do {
+            let id = try await RecipesAPI.createRecipe(body: body)
+            await loadRecipes()
+            return id
+        } catch {
+            self.error = error.localizedDescription
+            return nil
+        }
+    }
+
+    func updateRecipe(id: Int, body: [String: Any]) async -> Bool {
+        error = nil
+        do {
+            try await RecipesAPI.updateRecipe(id: id, body: body)
+            await loadRecipes()
+            return true
+        } catch {
+            self.error = error.localizedDescription
+            return false
+        }
+    }
+
+    func deleteRecipe(id: Int) async {
+        error = nil
+        recipes.removeAll { $0.id == id }
+        do {
+            try await RecipesAPI.deleteRecipe(id: id)
+        } catch {
+            self.error = error.localizedDescription
+            await loadRecipes()
+        }
+    }
 }
