@@ -9,6 +9,7 @@ struct ChoreCalendarApp: App {
     @State private var taskStore = TaskStore()
     @State private var applianceStore = ApplianceStore()
     @State private var vendorStore = VendorStore()
+    @State private var quoteStore = QuoteStore()
 
     var body: some Scene {
         WindowGroup {
@@ -33,6 +34,11 @@ struct ChoreCalendarApp: App {
                         Label("Recipes", systemImage: "book")
                     }
 
+                QuotesTab()
+                    .tabItem {
+                        Label("Quotes", systemImage: "doc.text")
+                    }
+
                 AppliancesTab()
                     .tabItem {
                         Label("Appliances", systemImage: "washer")
@@ -55,6 +61,7 @@ struct ChoreCalendarApp: App {
             .environment(taskStore)
             .environment(applianceStore)
             .environment(vendorStore)
+            .environment(quoteStore)
         }
     }
 }
