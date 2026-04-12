@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct ChoreCalendarApp: App {
+struct TuisApp: App {
     @State private var shoppingStore = ShoppingStore()
     @State private var mealPlanStore = MealPlanStore()
     @State private var recipeStore = RecipeStore()
